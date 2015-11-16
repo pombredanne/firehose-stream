@@ -6,18 +6,17 @@ Each event constitues the release of a package in one of the supported platforms
 
 It implements the [HTML5 Server-Sent Events / EventSource API](https://developer.mozilla.org/en-US/docs/Web/API/EventSource).
 
-Sample clients in the `examples` folder.
+Sample clients in the `examples` folder. And a running example [here](http://librariesio.github.io/firehose-stream/).
 
 ## Endpoint
 
 `http://firehose.libraries.io/events`
 
-CORS is supported.
+Only the `http` is supported at the moment so if you connect from a secure page make sure to allow mixed content. CORS is supported.
 
 ## Event stream format
 
 ```
-retry: 500
 event: pkg
 data: {"platform":"Packagist","name":"miniframe/miniframe","version":"1.0.x-dev"}
 ```
